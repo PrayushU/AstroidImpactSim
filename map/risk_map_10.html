@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8d4d2d1e686dda217018b6f5211ae1c1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed;
+            top: 50px; right: 50px; width: 220px; height: 130px;
+            background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+            padding: 10px; box-shadow: 3px 3px 3px grey;">
+            &nbsp; Damage Levels <br>
+            &nbsp; <span style="background:blue; display:inline-block;
+                width:10px; height:10px;"></span> 1 kPa - Minor Damage <br>
+            &nbsp; <span style="background:green; display:inline-block;
+                width:10px; height:10px;"></span> 4 kPa - Moderate Damage <br>
+            &nbsp; <span style="background:orange; display:inline-block;
+                width:10px; height:10px;"></span> 30 kPa - Severe Damage <br>
+            &nbsp; <span style="background:red; display:inline-block;
+                width:10px; height:10px;"></span> 50 kPa - Extreme Damage <br>
+        </div>
+        
+    
+        <div style="position: fixed;
+            top: 50px; right: 50px; width: 220px; height: 130px;
+            background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+            padding: 10px; box-shadow: 3px 3px 3px grey;">
+            &nbsp; Damage Levels <br>
+            &nbsp; <span style="background:blue; display:inline-block;
+                width:10px; height:10px;"></span> 1 kPa - Minor Damage <br>
+            &nbsp; <span style="background:green; display:inline-block;
+                width:10px; height:10px;"></span> 4 kPa - Moderate Damage <br>
+            &nbsp; <span style="background:orange; display:inline-block;
+                width:10px; height:10px;"></span> 30 kPa - Severe Damage <br>
+            &nbsp; <span style="background:red; display:inline-block;
+                width:10px; height:10px;"></span> 50 kPa - Extreme Damage <br>
+        </div>
+        
+    
+        <div style="position: fixed;
+            top: 50px; right: 50px; width: 220px; height: 130px;
+            background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+            padding: 10px; box-shadow: 3px 3px 3px grey;">
+            &nbsp; Damage Levels <br>
+            &nbsp; <span style="background:blue; display:inline-block;
+                width:10px; height:10px;"></span> 1 kPa - Minor Damage <br>
+            &nbsp; <span style="background:green; display:inline-block;
+                width:10px; height:10px;"></span> 4 kPa - Moderate Damage <br>
+            &nbsp; <span style="background:orange; display:inline-block;
+                width:10px; height:10px;"></span> 30 kPa - Severe Damage <br>
+            &nbsp; <span style="background:red; display:inline-block;
+                width:10px; height:10px;"></span> 50 kPa - Extreme Damage <br>
+        </div>
+        
+    
+        <div style="position: fixed;
+            top: 50px; right: 50px; width: 220px; height: 130px;
+            background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+            padding: 10px; box-shadow: 3px 3px 3px grey;">
+            &nbsp; Damage Levels <br>
+            &nbsp; <span style="background:blue; display:inline-block;
+                width:10px; height:10px;"></span> 1 kPa - Minor Damage <br>
+            &nbsp; <span style="background:green; display:inline-block;
+                width:10px; height:10px;"></span> 4 kPa - Moderate Damage <br>
+            &nbsp; <span style="background:orange; display:inline-block;
+                width:10px; height:10px;"></span> 30 kPa - Severe Damage <br>
+            &nbsp; <span style="background:red; display:inline-block;
+                width:10px; height:10px;"></span> 50 kPa - Extreme Damage <br>
+        </div>
+        
+    
+        <div style="position: fixed;
+            top: 50px; right: 50px; width: 220px; height: 130px;
+            background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+            padding: 10px; box-shadow: 3px 3px 3px grey;">
+            &nbsp; Damage Levels <br>
+            &nbsp; <span style="background:blue; display:inline-block;
+                width:10px; height:10px;"></span> 1 kPa - Minor Damage <br>
+            &nbsp; <span style="background:green; display:inline-block;
+                width:10px; height:10px;"></span> 4 kPa - Moderate Damage <br>
+            &nbsp; <span style="background:orange; display:inline-block;
+                width:10px; height:10px;"></span> 30 kPa - Severe Damage <br>
+            &nbsp; <span style="background:red; display:inline-block;
+                width:10px; height:10px;"></span> 50 kPa - Extreme Damage <br>
+        </div>
+        
+    
+        <div style="position: fixed;
+            top: 50px; right: 50px; width: 220px; height: 130px;
+            background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+            padding: 10px; box-shadow: 3px 3px 3px grey;">
+            &nbsp; Damage Levels <br>
+            &nbsp; <span style="background:blue; display:inline-block;
+                width:10px; height:10px;"></span> 1 kPa - Minor Damage <br>
+            &nbsp; <span style="background:green; display:inline-block;
+                width:10px; height:10px;"></span> 4 kPa - Moderate Damage <br>
+            &nbsp; <span style="background:orange; display:inline-block;
+                width:10px; height:10px;"></span> 30 kPa - Severe Damage <br>
+            &nbsp; <span style="background:red; display:inline-block;
+                width:10px; height:10px;"></span> 50 kPa - Extreme Damage <br>
+        </div>
+        
+    
+        <div style="position: fixed;
+            top: 50px; right: 50px; width: 220px; height: 130px;
+            background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+            padding: 10px; box-shadow: 3px 3px 3px grey;">
+            &nbsp; Damage Levels <br>
+            &nbsp; <span style="background:blue; display:inline-block;
+                width:10px; height:10px;"></span> 1 kPa - Minor Damage <br>
+            &nbsp; <span style="background:green; display:inline-block;
+                width:10px; height:10px;"></span> 4 kPa - Moderate Damage <br>
+            &nbsp; <span style="background:orange; display:inline-block;
+                width:10px; height:10px;"></span> 30 kPa - Severe Damage <br>
+            &nbsp; <span style="background:red; display:inline-block;
+                width:10px; height:10px;"></span> 50 kPa - Extreme Damage <br>
+        </div>
+        
+    
+        <div style="position: fixed;
+            top: 50px; right: 50px; width: 220px; height: 130px;
+            background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+            padding: 10px; box-shadow: 3px 3px 3px grey;">
+            &nbsp; Damage Levels <br>
+            &nbsp; <span style="background:blue; display:inline-block;
+                width:10px; height:10px;"></span> 1 kPa - Minor Damage <br>
+            &nbsp; <span style="background:green; display:inline-block;
+                width:10px; height:10px;"></span> 4 kPa - Moderate Damage <br>
+            &nbsp; <span style="background:orange; display:inline-block;
+                width:10px; height:10px;"></span> 30 kPa - Severe Damage <br>
+            &nbsp; <span style="background:red; display:inline-block;
+                width:10px; height:10px;"></span> 50 kPa - Extreme Damage <br>
+        </div>
+        
+    
+        <div style="position: fixed;
+            top: 50px; right: 50px; width: 220px; height: 130px;
+            background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+            padding: 10px; box-shadow: 3px 3px 3px grey;">
+            &nbsp; Damage Levels <br>
+            &nbsp; <span style="background:blue; display:inline-block;
+                width:10px; height:10px;"></span> 1 kPa - Minor Damage <br>
+            &nbsp; <span style="background:green; display:inline-block;
+                width:10px; height:10px;"></span> 4 kPa - Moderate Damage <br>
+            &nbsp; <span style="background:orange; display:inline-block;
+                width:10px; height:10px;"></span> 30 kPa - Severe Damage <br>
+            &nbsp; <span style="background:red; display:inline-block;
+                width:10px; height:10px;"></span> 50 kPa - Extreme Damage <br>
+        </div>
+        
+    
+        <div style="position: fixed;
+            top: 50px; right: 50px; width: 220px; height: 130px;
+            background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+            padding: 10px; box-shadow: 3px 3px 3px grey;">
+            &nbsp; Damage Levels <br>
+            &nbsp; <span style="background:blue; display:inline-block;
+                width:10px; height:10px;"></span> 1 kPa - Minor Damage <br>
+            &nbsp; <span style="background:green; display:inline-block;
+                width:10px; height:10px;"></span> 4 kPa - Moderate Damage <br>
+            &nbsp; <span style="background:orange; display:inline-block;
+                width:10px; height:10px;"></span> 30 kPa - Severe Damage <br>
+            &nbsp; <span style="background:red; display:inline-block;
+                width:10px; height:10px;"></span> 50 kPa - Extreme Damage <br>
+        </div>
+        
+    
+            <div class="folium-map" id="map_8d4d2d1e686dda217018b6f5211ae1c1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8d4d2d1e686dda217018b6f5211ae1c1 = L.map(
+                "map_8d4d2d1e686dda217018b6f5211ae1c1",
+                {
+                    center: [55.824385994529514, -3.9562609142724305],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_8d4d2d1e686dda217018b6f5211ae1c1);
+
+            
+
+        
+    
+            var tile_layer_eec3d4c8428ebb5b6c1a131280596dfe = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_eec3d4c8428ebb5b6c1a131280596dfe.addTo(map_8d4d2d1e686dda217018b6f5211ae1c1);
+    
+            var circle_0ad2a91566666341a7360b79776adcc4 = L.circle(
+                [55.824385994529514, -3.9562609142724305],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 48299.000365659595, "stroke": true, "weight": 3}
+            ).addTo(map_8d4d2d1e686dda217018b6f5211ae1c1);
+        
+    
+            var circle_81f18d457d9ce9b70c87ed52a9c65e49 = L.circle(
+                [56.00683433933104, -5.277111595889398],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 49611.566914245486, "stroke": true, "weight": 3}
+            ).addTo(map_8d4d2d1e686dda217018b6f5211ae1c1);
+        
+    
+            var circle_1422561096da9599be7e1a84738212e5 = L.circle(
+                [55.67984238270789, -3.761511915235997],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26210.499880835414, "stroke": true, "weight": 3}
+            ).addTo(map_8d4d2d1e686dda217018b6f5211ae1c1);
+        
+    
+            var circle_0f926bfd91b2c6e9bab35d57398bf213 = L.circle(
+                [55.79371463773969, -3.7984988340527366],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39475.00600479543, "stroke": true, "weight": 3}
+            ).addTo(map_8d4d2d1e686dda217018b6f5211ae1c1);
+        
+    
+            var circle_e8ea1feb2b3b81438749e97918fc7151 = L.circle(
+                [55.780856949241254, -3.7659698819059937],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 70593.22386048734, "stroke": true, "weight": 3}
+            ).addTo(map_8d4d2d1e686dda217018b6f5211ae1c1);
+        
+    
+            var circle_3e9dd8d78233851af68005b991c825e1 = L.circle(
+                [55.75786531334971, -4.164976553082597],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 42844.65336240828, "stroke": true, "weight": 3}
+            ).addTo(map_8d4d2d1e686dda217018b6f5211ae1c1);
+        
+    
+            var circle_0c0eb0e8dd00b6bedc2414d78bc4a835 = L.circle(
+                [55.81236318587624, -3.8550644230601403],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 41381.60147704184, "stroke": true, "weight": 3}
+            ).addTo(map_8d4d2d1e686dda217018b6f5211ae1c1);
+        
+    
+            var circle_8269ec4b4d06e1a905be0a45a2f479c0 = L.circle(
+                [55.92102949286625, -4.411348515592077],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 49698.90215434134, "stroke": true, "weight": 3}
+            ).addTo(map_8d4d2d1e686dda217018b6f5211ae1c1);
+        
+    
+            var circle_a08f5a94d7f6a86e6ac2cd2da372144e = L.circle(
+                [55.83312636221372, -4.025971351203483],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30295.99762521684, "stroke": true, "weight": 3}
+            ).addTo(map_8d4d2d1e686dda217018b6f5211ae1c1);
+        
+    
+            var circle_03bde3c6fa0cc4077dbcfd593e0ea720 = L.circle(
+                [55.70335464592124, -3.767480492704207],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 49081.1359602958, "stroke": true, "weight": 3}
+            ).addTo(map_8d4d2d1e686dda217018b6f5211ae1c1);
+        
+</script>
+</html>

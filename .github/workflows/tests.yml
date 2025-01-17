@@ -1,0 +1,30 @@
+name: run-tests
+on:
+  push:
+  # pull_request:
+  #   branches: [main]
+
+# This job installs dependencies and runs tests
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Package and data setup
+        run: |
+          pip install -r requirements.txt
+          pip install -e .
+          python download_data.py
+
+      - name: Run flake8
+        run: |
+          flake8 --max-line-length=120
+
+      - name: Run tests
+        run: |
+          pytest tests/
